@@ -33,8 +33,8 @@ app.get('/', (req, res) => {
 /**
  * listen for requests registration
  */ 
-const server = app.listen(4000, () => {
-    console.log("Server is listening on port 4000");
+const server = app.listen(8070, () => {
+    console.log("Server is listening on port 8070");
 });
 connections = [];
 const io = require('socket.io').listen(server)

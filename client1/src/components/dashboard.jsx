@@ -8,7 +8,7 @@ import Icon from '@material-ui/core/Icon';
 import { chatServices, userChatArray } from "../services/chatservices";
 import MessageDisplay from './messagedisplay';
 import io from 'socket.io-client';
-const socket = io.connect('http://localhost:4000')
+const socket = io.connect('http://localhost:8070')
 export default class DashboardPage extends React.Component {
     constructor(props) {
         super(props);

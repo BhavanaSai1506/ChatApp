@@ -12,6 +12,7 @@
     "react-toastify": "^4.5.2",
     "socket.io-client": "^2.2.0"
   },
+  "proxy":"http://localhost:8070",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
