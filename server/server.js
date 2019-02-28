@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
     res.json({ "message": "Welcome to chatApp" });
 });
 /**
- * listen for requests 
+ * listen for requests registration
  */ 
 const server = app.listen(4000, () => {
     console.log("Server is listening on port 4000");
@@ -74,7 +74,7 @@ io.on('disconnect', function (data) {
 
 // app.listen(3024,()=>{
 
-//  console.log("Well done, now I am listening...")
+//  console.log("Well done, now I am listening...")GET
 
 // })
 // app.use(express.static(__dirname))

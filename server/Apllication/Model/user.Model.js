@@ -30,7 +30,7 @@ userModel.prototype.registration = (body, callback) => {
         "email": body.email
     }, (err, data) => {
         if (err) {
-            console.log("Error in registration");
+            console.log("Error in registration");db.createCollection(name, options)
             callback(err);
         } else if (data.length > 0) {
             console.log("Email already exists");
