@@ -6,7 +6,7 @@ exports.addMessage = (req, callback) => {
             return callback(err);
         } else {
 
-            return callback(null, result);
+            return  callback(null, result);
         }
     })
 }

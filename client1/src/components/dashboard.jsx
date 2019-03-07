@@ -5,10 +5,10 @@ import { TextField, MenuItem } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
-import { chatServices, userChatArray } from "../services/chatservices";
+import { chatServices,chatDisplay, userChatArray } from "../services/chatservices";
 import MessageDisplay from './messagedisplay';
 import io from 'socket.io-client';
-const socket = io.connect('http://localhost:8070')
+const socket = io.connect('http://localhost:8000')
 export default class DashboardPage extends React.Component {
     constructor(props) {
         super(props);
@@ -69,7 +69,8 @@ export default class DashboardPage extends React.Component {
         this.setState({ Sender: Sender })
         console.log('Sender is :', Sender);
         console.log("Selected receiver: ", this.state.Receiver);
-        //  chatDisplay(Sender, this.state.Receiver, this.state.message);
+        chatDisplay(Sender, this.state.Receiver, this.state.message);
+        
         let request = {
             senderId: Sender,
             recieverId: this.state.Receiver,
@@ -85,7 +86,7 @@ export default class DashboardPage extends React.Component {
     }
     handlelogout = event => {
         event.preventDefault();
-        this.props.props.history.push('/loginPage');
+        this.props.props.history.push('/login');
     }
     handleClick = (key, event) => {
         this.setState({ anchorEl: null });

@@ -10,4 +10,5 @@ router.post('/resetpassword/:token', loginMiddleware.checkToken,userController.s
 router.post('/addMessage',chatControllers.addMessage);
 router.get('/getAllUsers',userController.getAllUsers);
 router.get('/getAllChats',chatControllers.getAllUserChats);
+
 module.exports=router;

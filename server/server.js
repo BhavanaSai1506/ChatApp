@@ -33,15 +33,15 @@ app.get('/', (req, res) => {
 /**
  * listen for requests registration
  */ 
-const server = app.listen(8070, () => {
-    console.log("Server is listening on port 8070");
+const server = app.listen(8080, () => {
+    console.log("Server is listening on port 8080");
 });
 connections = [];
 const io = require('socket.io').listen(server)
 io.sockets.on('connection', function (socket) {
-    console.log("hai io connected");
+    console.log("hiii connected to  io");
     connections.push(socket)
-    console.log("user connected")
+    console.log("connected to user")
     socket.on('new_msg', function (req) {
         chatControllers.addMessage(req, (err, result) => {
             if (err) {
